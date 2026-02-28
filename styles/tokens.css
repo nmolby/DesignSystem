@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+
+  /* Core color tokens */
+  --ds-color-bg: #f4ebdf;
+  --ds-color-bg-alt: #fff7ed;
+  --ds-color-surface: #f0dec8;
+  --ds-color-surface-strong: #e4c4a2;
+  --ds-color-border: #d0ab8d;
+  --ds-color-text: #1f130f;
+  --ds-color-text-muted: #5f4a42;
+  --ds-color-primary: #c86f4a;
+  --ds-color-primary-strong: #9f4223;
+  --ds-color-primary-soft: #e9b594;
+  --ds-color-focus: #7b2f16;
+  --ds-color-success: #3f7450;
+
+  /* Type tokens */
+  --ds-font-body: "Epilogue", "Avenir Next", "Segoe UI", sans-serif;
+  --ds-font-heading: "Fraunces", "Iowan Old Style", serif;
+  --ds-font-ui: "Sora", "Trebuchet MS", sans-serif;
+
+  --ds-font-size-100: 0.8rem;
+  --ds-font-size-200: 0.92rem;
+  --ds-font-size-300: 1rem;
+  --ds-font-size-400: 1.25rem;
+  --ds-font-size-500: clamp(1.55rem, 2.6vw, 2.2rem);
+  --ds-font-size-600: clamp(2rem, 4vw, 3.2rem);
+
+  /* Space tokens */
+  --ds-space-1: 0.25rem;
+  --ds-space-2: 0.5rem;
+  --ds-space-3: 0.75rem;
+  --ds-space-4: 1rem;
+  --ds-space-5: 1.5rem;
+  --ds-space-6: 2rem;
+  --ds-space-7: 3rem;
+
+  /* Radius and effects */
+  --ds-radius-sm: 10px;
+  --ds-radius-md: 16px;
+  --ds-radius-lg: 24px;
+  --ds-shadow-sm: 0 8px 20px rgba(47, 26, 18, 0.12);
+  --ds-shadow-md: 0 16px 34px rgba(47, 26, 18, 0.16);
+}

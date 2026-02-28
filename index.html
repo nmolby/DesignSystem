@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terracotta Editorial Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+  </head>
+  <body>
+    <main class="ds-shell">
+      <header class="ds-hero">
+        <p class="ds-eyebrow">Terracotta Editorial</p>
+        <h1>Warm foundations for personal projects</h1>
+        <p class="ds-lede">
+          This starter is now focused on your selected direction. Use these
+          tokens and primitives as a base package that your other repos can load
+          via git submodule.
+        </p>
+        <div class="ds-row">
+          <a class="ds-nav-link" href="./docs/components.html">Open component docs</a>
+        </div>
+      </header>
+
+      <section class="ds-grid" aria-label="Component gallery">
+        <article class="ds-card">
+          <h2>Buttons</h2>
+          <p>Primary emphasis with warm depth and utility variants.</p>
+          <div class="ds-row">
+            <button class="ds-btn ds-btn-primary">Primary Action</button>
+            <button class="ds-btn ds-btn-secondary">Secondary</button>
+            <button class="ds-btn ds-btn-ghost">Ghost</button>
+          </div>
+        </article>
+
+        <article class="ds-card">
+          <h2>Tags and Alert</h2>
+          <span class="ds-tag">Curated Warm Theme</span>
+          <div class="ds-alert">
+            <strong>Editorial notice:</strong> Build components around tokens,
+            then expose one stable CSS entry point for your submodule consumers.
+          </div>
+        </article>
+
+        <article class="ds-card">
+          <h2>Field</h2>
+          <label class="ds-field">
+            <span class="ds-label">Email for updates</span>
+            <input class="ds-input" placeholder="name@example.com" />
+          </label>
+          <p class="ds-note">
+            Input styles are neutral enough to compose with framework-specific
+            wrappers.
+          </p>
+        </article>
+      </section>
+
+      <section class="ds-footer" aria-label="Token sampler">
+        <p class="ds-eyebrow">Token Sampler</p>
+        <h2>Core Terracotta values</h2>
+        <ul class="ds-token-list">
+          <li><span>Background</span><code>#f4ebdf</code></li>
+          <li><span>Surface</span><code>#f0dec8</code></li>
+          <li><span>Primary</span><code>#c86f4a</code></li>
+          <li><span>Primary Strong</span><code>#9f4223</code></li>
+          <li><span>Text</span><code>#1f130f</code></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

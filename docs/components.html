@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terracotta Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/tokens.css" />
+    <link rel="stylesheet" href="../styles/components.css" />
+  </head>
+  <body>
+    <main class="ds-shell">
+      <nav class="ds-topnav" aria-label="Design system nav">
+        <strong>Terracotta DS</strong>
+        <a class="ds-nav-link" href="../index.html">Gallery</a>
+        <a class="ds-nav-link" href="./components.html" aria-current="page">Components</a>
+      </nav>
+
+      <header class="ds-hero">
+        <p class="ds-eyebrow">Component Docs</p>
+        <h1>Reference primitives</h1>
+        <p class="ds-lede">
+          These are baseline components intended for submodule consumers. Start
+          from these classes, then add framework wrappers as needed.
+        </p>
+      </header>
+
+      <section class="ds-grid">
+        <article class="ds-card">
+          <h2>Actions</h2>
+          <div class="ds-row">
+            <button class="ds-btn ds-btn-primary" id="open-modal">Open Modal</button>
+            <button class="ds-btn ds-btn-secondary" id="show-toast">Show Toast</button>
+            <button class="ds-btn ds-btn-ghost">Disabled State</button>
+          </div>
+          <p class="ds-note">
+            Keyboard pattern: press <span class="ds-kbd">Esc</span> to close
+            modal.
+          </p>
+        </article>
+
+        <article class="ds-card ds-table-wrap">
+          <h2>Table</h2>
+          <table class="ds-table">
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Value</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>--ds-color-primary</td>
+                <td>#c86f4a</td>
+                <td>Buttons, accents, links</td>
+              </tr>
+              <tr>
+                <td>--ds-color-surface</td>
+                <td>#f0dec8</td>
+                <td>Cards and containers</td>
+              </tr>
+              <tr>
+                <td>--ds-radius-md</td>
+                <td>16px</td>
+                <td>Cards, modal, nav</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+
+    <section class="ds-modal-backdrop" id="modal-backdrop" data-open="false">
+      <article class="ds-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="ds-modal-head">
+          <h2 id="modal-title">Terracotta modal</h2>
+          <button class="ds-icon-btn" id="close-modal" aria-label="Close dialog">x</button>
+        </div>
+        <p class="ds-lede">
+          Use this as a visual baseline. For production, pair with focus trap
+          logic in your framework shell.
+        </p>
+        <div class="ds-row">
+          <button class="ds-btn ds-btn-primary" id="confirm-modal">Confirm</button>
+          <button class="ds-btn ds-btn-ghost" id="cancel-modal">Cancel</button>
+        </div>
+      </article>
+    </section>
+
+    <div class="ds-toast-stack" id="toast-stack" aria-live="polite"></div>
+
+    <script src="./components.js"></script>
+  </body>
+</html>
