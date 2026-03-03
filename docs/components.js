@@ -42,3 +42,42 @@ document.addEventListener("keydown", (event) => {
     closeModal();
   }
 });
+
+// FAB interactions
+const fabToggle = document.getElementById("fab-toggle");
+const fabMenu = document.getElementById("fab-menu");
+
+function toggleFAB() {
+  const isOpen = fabMenu.dataset.open === "true";
+  fabMenu.dataset.open = isOpen ? "false" : "true";
+  fabToggle.dataset.expanded = isOpen ? "false" : "true";
+}
+
+function closeFAB() {
+  fabMenu.dataset.open = "false";
+  fabToggle.dataset.expanded = "false";
+}
+
+if (fabToggle && fabMenu) {
+  fabToggle.addEventListener("click", toggleFAB);
+
+  // Handle FAB action clicks
+  const fabActions = document.querySelectorAll(".ds-fab-action");
+  fabActions.forEach((action) => {
+    action.addEventListener("click", () => {
+      const actionType = action.dataset.action;
+      showToast(`Action "${actionType}" triggered`, "FAB Action");
+      closeFAB();
+    });
+  });
+
+  // Close FAB when clicking outside
+  document.addEventListener("click", (event) => {
+    if (
+      !event.target.closest(".ds-fab-container") &&
+      fabMenu.dataset.open === "true"
+    ) {
+      closeFAB();
+    }
+  });
+}

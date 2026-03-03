@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terracotta Components</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Sora:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/design-system.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <main class="ds-shell">
@@ -39,7 +37,7 @@
           </div>
           <p class="ds-note">
             Keyboard pattern: press <span class="ds-kbd">Esc</span> to close
-            modal.
+            modal. A FAB (floating action button) is visible in the bottom-right corner.
           </p>
         </article>
 
@@ -79,7 +77,9 @@
       <article class="ds-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="ds-modal-head">
           <h2 id="modal-title">Terracotta modal</h2>
-          <button class="ds-icon-btn" id="close-modal" aria-label="Close dialog">x</button>
+          <button class="ds-icon-btn" id="close-modal" aria-label="Close dialog">
+            <i data-feather="x"></i>
+          </button>
         </div>
         <p class="ds-lede">
           Use this as a visual baseline. For production, pair with focus trap
@@ -94,6 +94,25 @@
 
     <div class="ds-toast-stack" id="toast-stack" aria-live="polite"></div>
 
+    <div class="ds-fab-container">
+      <div class="ds-fab-menu" id="fab-menu" data-open="false">
+        <button class="ds-fab-action" data-action="action1">
+          <span class="ds-fab-action-icon"><i data-feather="edit-3"></i></span>
+          <span>Log Entry</span>
+        </button>
+        <button class="ds-fab-action" data-action="action2">
+          <span class="ds-fab-action-icon"><i data-feather="archive"></i></span>
+          <span>Freeze Item</span>
+        </button>
+      </div>
+      <button class="ds-fab" id="fab-toggle" aria-label="Open actions menu" data-expanded="false">
+        +
+      </button>
+    </div>
+
     <script src="./components.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
